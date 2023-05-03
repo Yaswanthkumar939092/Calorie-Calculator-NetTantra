@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+@keyframes sideFromLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes sideFromRight {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes sideFromRightInForm {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes sideFromLeftInForm {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-container {
+  background-image: url('https://img.freepik.com/free-photo/start-diet-nutrition-eating-choice-weight-healthy-concept_53876-125086.jpg?w=900&t=st=1682753688~exp=1682754288~hmac=97e6de73239cfb885d0a74a4cdd5580231b737af66027dfb60a6cde32879c614');
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  color: rgb(31, 104, 187);
+  font-size: 20px;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.heading {
+  text-align: center;
+  color: blue;
+}
+
+.forms-cont {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  min-height: 50vh;
+  width: 40vw;
+  animation: sideFromLeft 3s ease-in-out;
+  border-top: 5px solid rgb(225, 45, 201);
+  border-bottom: 5px solid rgb(225, 45, 201);
+  border-right: 5px solid rgb(91, 224, 81);
+  border-left: 5px solid rgb(91, 224, 81);
+}
+@media (max-width: 768px) {
+  .forms-cont {
+    width: 70%;
+  }
+}
+
+.select {
+  background-color: hotpink;
+  color: #fff;
+  align-self: left;
+  margin-right: 20px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid green;
+  animation: sideFromRightInForm 3s ease 3s;
+}
+.input {
+  background-color: navajowhite;
+  animation: sideFromLeftInForm 3s ease 3s;
+  padding: 10px;
+  height: 40px;
+  margin: 10px;
+  border: 1px solid darkmagenta;
+}
+.button {
+  border: 1px solid salmon;
+  background-color: coral;
+  /* margin-left: 570px; */
+  border-width: 0px;
+  padding: 5px;
+  color: rgb(15, 94, 241);
+  border-radius: 5px;
+  margin-top: 20px;
+  height: 30px;
+  animation: rotate 3s linear;
+  width: 90px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sideFromLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes sideFromRight {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.left {
+  text-align: center;
+  background-color: chartreuse;
+  padding: 10px;
+  border-radius: 5px;
+  animation: sideFromRight 4s infinite;
+}
+.right {
+  text-align: center;
+
+  background-color: crimson;
+  padding: 10px;
+  border-radius: 5px;
+  animation: sideFromLeft 4s infinite;
+}
+.clear {
+  background-color: gold;
+  color: #fff;
+}
